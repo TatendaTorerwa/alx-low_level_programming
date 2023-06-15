@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
-*main is the entry point
+*main 
 *Return value 0
 */
 int main(void)
-
 {
 
 printf("text,\n");
