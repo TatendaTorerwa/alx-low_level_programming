@@ -6,7 +6,7 @@
 int main(void)
 {
 
-printf("text,\n");
+printf("text\n");
 
 return (0);
 
