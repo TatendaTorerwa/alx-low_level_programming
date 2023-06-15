@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-*main 
-*Return value 0
+*main-entry point 
+*Return value 0 (success)
 */
-int main(void)
+int main (void)
 {
 
 printf("text,\n");
