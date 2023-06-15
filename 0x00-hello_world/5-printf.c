@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *main - entry point 
-*Return : always 0 (success)
+*Return value : always 0 (success)
 */
 int main(void)
 
@@ -9,6 +9,6 @@ int main(void)
 
 printf("text,\n");
 
-return(0);
+return (0);
 
 }
