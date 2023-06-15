@@ -1,11 +1,12 @@
 #include <stdio.h>
 /**
 *main - main entry point
-*return value always 0 (success)
+*Return:  value 0 is considered as successful execution
 */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
+
 return (0);
 
 }
