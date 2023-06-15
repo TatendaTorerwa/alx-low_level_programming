@@ -1,11 +1,8 @@
 #include <stdio.h>
 /**
-*main entry point 
-*Return value 0 (success)
-*
+*main - entry point 
 */
 int main(void)
-/*Return value 0*/
 {
 
 printf("text,\n");
