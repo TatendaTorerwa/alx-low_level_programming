@@ -2,8 +2,10 @@
 /**
 *main entry point 
 *Return value 0 (success)
+*
 */
-int main()
+int main(void)
+/*Return value 0*/
 {
 
 printf("text,\n");
