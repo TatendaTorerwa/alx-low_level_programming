@@ -1,5 +1,8 @@
 #include <stdio.h>
-/*C program that prints */
+/**
+* main - main entry point
+*return : always 0 (success)
+*/
 
 int main(void)
 {
