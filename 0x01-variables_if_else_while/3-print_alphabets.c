@@ -12,8 +12,8 @@ int main(void)
 
 {
 
-int x=97;
-int y=65;
+int x = 97;
+int y = 65;
 
 while (x <= 122)
 {
