@@ -24,9 +24,11 @@ x++;
 while (y <= 90)
 {
 putchar(y);
-y++
+y++;
 }
 
 putchar('\n');
 
 return (0);
+
+}
