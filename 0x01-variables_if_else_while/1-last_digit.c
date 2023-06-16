@@ -12,24 +12,24 @@
 int main(void)
 {
 	int n;
-int ld;
+int Ld;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-ld = n % 10;
+Ld = n % 10;
 
-if (ld > 5)
+if (Ld > 5)
 {
-printf("last digit of %d is %d and is greater than 5\n", n, ld);
+printf("last digit of %d is %d and is greater than 5\n", n, Ld);
 }
-else if (ld == 0)
+else if (Ld == 0)
 {
-printf("last digit of %d is %d and is 0\n", n, ld);
+printf("last digit of %d is %d and is 0\n", n, Ld);
 }
 else
 {
-printf("last digit of %d is %d and is less than 6 and not zero\n", n, ld);
+printf("last digit of %d is %d and is less than 6 and not zero\n", n, Ld);
 }
 
 return (0);
