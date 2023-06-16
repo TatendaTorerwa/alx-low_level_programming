@@ -17,6 +17,11 @@ for (z = 48; z <= 57; z++)
 
 {
 putchar(z);
+
+if (z = 57)
+{
+break;
+}
 putchar(',');
 putchar(' ');
 
