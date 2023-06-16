@@ -1,10 +1,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
 *main - entry point
-*decription:"return value is 0 considered success"
+*
+*Description: "return value is 0 considered success"
+*
+*Return: always 0 (success)
 */
+
 int main(void)
 {
 	int n;
