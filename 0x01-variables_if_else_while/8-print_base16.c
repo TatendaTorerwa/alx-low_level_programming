@@ -19,14 +19,12 @@ for (a = 48; a <= 57; a++)
 
 {
 putchar(a);
-a++;
 }
 
 for (x = 97; x <= 102; x++)
 
 {
 putchar(x);
-x++;
 
 }
 
