@@ -8,3 +8,4 @@ functions,nested loops.
 6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you.
 7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important.
 8. I'm federal agent Jack Bauer, and today is the longest day of my life.
+10. a + b.
