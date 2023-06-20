@@ -22,6 +22,7 @@ for (c = 48; c <= 53; c++)
 {
 for (d = 48; d <= 57; d++)
 {
+break;
 
 _putchar(a);
 _putchar(b);
