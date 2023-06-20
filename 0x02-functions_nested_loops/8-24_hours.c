@@ -22,13 +22,17 @@ for (c = 48; c <= 53; c++)
 {
 for (d = 48; d <= 57; d++)
 {
-
+if (a >= 48 && b >= 52)
+{
+break;
 _putchar(a);
 _putchar(b);
 _putchar(':');
 _putchar(c);
 _putchar(d);
 _putchar('\n');
+
+}
 
 }
 
