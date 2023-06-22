@@ -20,11 +20,11 @@ int main(void)
 
 			printf("FizzBuzz ");
 
-		else if (m % 3 == 0)
+		else if (m % 3 == 0 && m % 5 != 0)
 
 			printf("Fizz ");
 
-		else if (m % 5 == 0)
+		else if (m % 5 == 0 && m % 3 != 0)
 
 			printf("Buzz ");
 
