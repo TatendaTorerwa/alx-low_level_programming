@@ -32,6 +32,10 @@ int main(void)
 		else
 
 			printf("%d ", m);
+		if (m != 100)
+		{
+			printf(" ");
+		}
 
 	}
 		printf("\n");
