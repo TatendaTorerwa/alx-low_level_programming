@@ -14,38 +14,31 @@ void print_triangle(int size)
 
 {
 
-	int start = 0;
-	int end = size;
-	int count;
+	int row, hashes, spaces;
 
 	if (size <= 0)
+
 	{
 		_putchar('\n');
 	}
 
 	else
+
 	{
 
-		for (count = 0; count < end; count++)
+		for (row = 1; row <= size; row++)
 		{
 
-			while (start < end)
-
+			for (spaces = size - row; spaces >= 1; spaces--)
 			{
-				if ((start + count + 1) >= end)
-				{
-					_putchar('#');
-				}
-
-				else
-				{
-
-					_putchar(' ');
-				start++;
-				}
+				_putchar(32);
 			}
-			start = 0;
-			_putchar('\n');
+			for (hashes = 1; hashes <= row; hashes++)
+			{
+
+				_putchar(35);
+			}
+				_putchar('\n');
 		}
 	}
 }
