@@ -22,7 +22,7 @@ void print_rev(char *s)
 
 		i++;
 	}
-	for (p = i; p >= 0; p--)
+	for (p = i - 1; p >= 0; p--)
 	{
 
 		_putchar(s[p]);
