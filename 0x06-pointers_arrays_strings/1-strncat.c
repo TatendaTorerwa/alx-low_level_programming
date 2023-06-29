@@ -7,6 +7,8 @@
 *
 *@src: pointer
 *
+*@n: integer arg
+*
 *Description: "concatenates two strings"
 *
 *Return: pointer
