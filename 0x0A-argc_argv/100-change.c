@@ -6,7 +6,7 @@
 *
 *@argc: argument count
 *
-*argv: argument vector
+*@argv: argument vector
 *
 *Description: " prints the minimum number of coins to make change"
 *
