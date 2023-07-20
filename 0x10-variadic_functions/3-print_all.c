@@ -20,7 +20,8 @@ void print_all(const char * const format, ...)
 	va_list lists;
 
 	va_start(lists, format);
-
+	if (format)
+	{
 		while (format[r])
 		{
 			switch (format[r])
@@ -40,11 +41,16 @@ void print_all(const char * const format, ...)
 						str = "(nil)";
 					printf("%s %s", separator, str);
 					break;
+
+					default:
+					r++;
+					continue;
 			}
 			separator = ", ";
 			r++;
 		}
-	
+	}
+
 		printf("\n");
 		va_end(lists);
 }
