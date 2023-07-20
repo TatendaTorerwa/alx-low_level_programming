@@ -14,43 +14,43 @@
 
 void print_all(const char * const format, ...)
 {
-	int r = 0;
-	char *str, *separator = "";
+	int i = 0;
+	char *str, *sep = "";
 
-	va_list lists;
+	va_list list;
 
-	va_start(lists, format);
+	va_start(list, format);
+
 	if (format)
 	{
-		while (format[r])
+		while (format[i])
 		{
-			switch (format[r])
+			switch (format[i])
 			{
 				case 'c':
-					printf("%s %c", separator, va_arg(lists, int));
+					printf("%s%c", sep, va_arg(list, int));
 					break;
 				case 'i':
-					printf("%s %d", separator, va_arg(lists, int));
+					printf("%s%d", sep, va_arg(list, int));
 					break;
 				case 'f':
-					printf("%s %f", separator, va_arg(lists, double));
+					printf("%s%f", sep, va_arg(list, double));
 					break;
 				case 's':
-					str = va_arg(lists, char *);
-					if (str == NULL)
+					str = va_arg(list, char *);
+					if (!str)
 						str = "(nil)";
-					printf("%s %s", separator, str);
+					printf("%s%s", sep, str);
 					break;
-
-					default:
-					// Handle invalid format specifier (optional)
-					break;
+				default:
+					i++;
+					continue;
 			}
-			separator = ", ";
-			r++;
+			sep = ", ";
+			i++;
 		}
 	}
 
-		printf("\n");
-		va_end(lists);
+	printf("\n");
+	va_end(list);
 }
