@@ -12,7 +12,7 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint *p, *q;
+	listint_t *p, *q;
 
 	p = head;
 	q = head;
