@@ -23,8 +23,20 @@ listint_t *find_listint_loop(listint_t *head)
 		q = q->next->next;
 		if (p == q)
 		{
-			return (p);
+			break;
 		}
 	}
-	return (NULL);
+	if (p != q)
+	{
+		return (NULL);
+	}
+
+	p = head;
+
+	while (p != q)
+	{
+		p = p->next;
+		q = q->next;
+	}
+	return (p);
 }
