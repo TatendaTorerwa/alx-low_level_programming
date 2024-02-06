@@ -12,29 +12,36 @@
  *  Return: Always EXIT_SUCCESS
  */
 
-int binary_search(int *array, size_t size, int value)
-{
-	size_t n, left = 0, right = size - 1;
+int jump_search(int *array, size_t size, int value) {
+    int jump, low, i;
 
-	if (array == NULL)
-		return (-1);
+    if (array == NULL || size == 0)
+        return -1;
 
-	while (left <= right)
+    jump = (int)sqrt(size);
+    low = 0;
 
-	{
-		printf("Searching in array: ");
-		for (n = left; n < right; n++)
-			printf("%d, ", array[n]);
-		printf("%d\n", array[n]);
+    printf("Value checked array[%d] = [%d]\n", low, array[low]);
+    for (i = 0; i < (int)size; i += jump) {
+        if (array[i] == value) {
+            printf("Value checked array[%d] = [%d]\n", i, array[i]);
+            return i;
+        }
+        if (array[i] < value) {
+            low = i;
+        }
+        if (array[i] > value) {
+            printf("Value found between indexes [%d] and [%d]\n", low, i);
+            break;
+        }
+        printf("Value checked array[%d] = [%d]\n", i, array[i]);
+    }
 
-		n = (left + right) / 2;
-		if (array[n] == value)
-			return (n);
-		if (array[n] > value)
-			right = n - 1;
-		else
-			left = n + 1;
-	}
+    for (i = low; i < (int)size; i++) {
+        printf("Value checked array[%d] = [%d]\n", i, array[i]);
+        if (array[i] == value)
+            return i;
+    }
 
-	return (-1);
+    return -1;
 }
