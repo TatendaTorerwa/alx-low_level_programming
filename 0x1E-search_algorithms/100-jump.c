@@ -1,46 +1,40 @@
 #include "search_algos.h"
-#include <math.h>
 
 /**
- * jump_search - searches for a value in an array of
- * integers using the Jump search algorithm
+ *  binary_search - Searches for a value using the Binary search algorithm.
  *
- * @array: input array
- * @size: size of the array
- * @value: value to search in
- * Return: index of the number
+ *  @array: Array to search.
+ *
+ *  @size: Number of elements in array.
+ *
+ *  @value:  Value to search.
+ *
+ *  Return: Always EXIT_SUCCESS
  */
 
-int jump_search(int *array, size_t size, int value) {
-    int jump, low, i;
+int binary_search(int *array, size_t size, int value)
+{
+	size_t n, left = 0, right = size - 1;
 
-    if (array == NULL || size == 0)
-        return -1;
+	if (array == NULL)
+		return (-1);
 
-    jump = (int) sqrt(size);
-    low = 0;
+	while (left <= right)
 
-    printf("Value checked array[%d] = [%d]\n", low, array[low]);
-    for (i = 0; i < (int)size; i += jump) {
-        if (array[i] == value) {
-            printf("Value checked array[%d] = [%d]\n", i, array[i]);
-            return i;
-        }
-        if (array[i] < value) {
-            low = i;
-        }
-        if (array[i] > value) {
-            printf("Value found between indexes [%d] and [%d]\n", low, i);
-            break;
-        }
-        printf("Value checked array[%d] = [%d]\n", i, array[i]);
-    }
+	{
+		printf("Searching in array: ");
+		for (n = left; n < right; n++)
+			printf("%d, ", array[n]);
+		printf("%d\n", array[n]);
 
-    for (i = low; i < (int)size; i++) {
-        printf("Value checked array[%d] = [%d]\n", i, array[i]);
-        if (array[i] == value)
-            return i;
-    }
+		n = (left + right) / 2;
+		if (array[n] == value)
+			return (n);
+		if (array[n] > value)
+			right = n - 1;
+		else
+			left = n + 1;
+	}
 
-    return -1;
+	return (-1);
 }
